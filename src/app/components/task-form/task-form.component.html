@@ -1,0 +1,52 @@
+<div class="task-form-container">
+    <h1>{{ isEditMode ? 'Edit Task' : 'Create New Task' }}</h1>
+  
+    <mat-card>
+      <mat-card-content>
+        <div class="loading-container" *ngIf="loading">
+          <mat-spinner diameter="40"></mat-spinner>
+        </div>
+  
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" *ngIf="!loading">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title" placeholder="Task title">
+            <mat-error *ngIf="f['title'].errors && f['title'].errors['required']">
+              Title is required
+            </mat-error>
+            <mat-error *ngIf="f['title'].errors && f['title'].errors['maxlength']">
+              Title cannot exceed 100 characters
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description" placeholder="Task description" rows="5"></textarea>
+            <mat-error *ngIf="f['description'].errors && f['description'].errors['maxlength']">
+              Description cannot exceed 500 characters
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status">
+              <mat-option *ngFor="let status of taskStatuses" [value]="status">
+                {{ status }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="f['status'].errors && f['status'].errors['required']">
+              Status is required
+            </mat-error>
+          </mat-form-field>
+  
+          <div class="button-container">
+            <button mat-button type="button" (click)="cancel()">Cancel</button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="loading">
+              <mat-spinner diameter="20" *ngIf="loading"></mat-spinner>
+              <span *ngIf="!loading">{{ isEditMode ? 'Update' : 'Create' }}</span>
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

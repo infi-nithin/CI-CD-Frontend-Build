@@ -1,0 +1,26 @@
+<mat-toolbar class="modern-toolbar">
+  <span class="app-title" routerLink="/home">Task Manager</span>
+  <span class="spacer"></span>
+
+  <ng-container *ngIf="currentUser; else loginButtons">
+    <button mat-button class="nav-button" [routerLink]="['/tasks']">
+      Tasks
+    </button>
+    <button mat-button class="user-menu-button" [matMenuTriggerFor]="userMenu">
+      {{ currentUser.username }}
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item (click)="logout()">Logout</button>
+    </mat-menu>
+  </ng-container>
+
+  <ng-template #loginButtons>
+    <button style="color: white;" mat-button class="nav-button" [routerLink]="['/login']">
+      Login
+    </button>
+    <button style="color: white;" mat-button class="nav-button" [routerLink]="['/register']">
+      Register
+    </button>
+  </ng-template>
+</mat-toolbar>

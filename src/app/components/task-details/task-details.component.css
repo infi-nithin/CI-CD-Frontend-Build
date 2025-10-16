@@ -1,0 +1,104 @@
+.task-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.back-button {
+  margin-bottom: 1.5rem;
+}
+
+.back-button button {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.back-button button:hover {
+  background-color: rgba(0, 86, 210, 0.1);
+}
+
+.back-button mat-icon {
+  margin-right: 8px;
+}
+
+.task-details-card {
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.task-details-card mat-card-header {
+  padding: 1.5rem;
+  background-color: rgba(0, 86, 210, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.title-container span:first-child {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.task-details-card mat-card-subtitle {
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+.task-details-card mat-card-content {
+  padding: 1.5rem;
+}
+
+.description-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.description-section p {
+  color: var(--text-color);
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.no-description {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.task-details-card mat-card-actions {
+  padding: 0 1rem 1rem;
+}
+
+.task-details-card button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.task-details-card button:hover {
+  background-color: var(--primary-light);
+  box-shadow: 0 4px 8px rgba(0, 86, 210, 0.3);
+}
+
+.task-details-card button mat-icon {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .title-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .title-container span:first-child {
+    font-size: 1.25rem;
+  }
+}

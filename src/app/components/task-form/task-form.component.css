@@ -1,0 +1,88 @@
+.task-form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.task-form-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.task-form-container mat-card {
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.task-form-container mat-card-content {
+  padding: 1rem;
+}
+
+.task-form-container mat-form-field {
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+.button-container button:first-child {
+  color: var(--text-light);
+}
+
+.button-container button:last-child {
+  background-color: var(--accent-color);
+  color: var(--white);
+  min-width: 120px;
+  transition: var(--transition);
+}
+
+.button-container button:last-child:hover:not([disabled]) {
+  background-color: var(--accent-hover);
+  box-shadow: 0 4px 8px rgba(255, 106, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.button-container button:last-child:disabled {
+  opacity: 0.7;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button-container button mat-spinner {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+  .task-form-container h1 {
+    font-size: 1.5rem;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .button-container button {
+    width: 100%;
+  }
+  
+  .button-container button:first-child {
+    order: 2;
+  }
+  
+  .button-container button:last-child {
+    order: 1;
+  }
+}

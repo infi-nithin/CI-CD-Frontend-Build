@@ -1,0 +1,90 @@
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">Unlock Your Productivity</h1>
+    <p class="hero-subtitle">
+      Organize, track, and accomplish more with our intuitive task management
+      system designed to help you stay focused on what matters most.
+    </p>
+    <div class="hero-buttons">
+      <button mat-raised-button class="get-started-btn" [routerLink]="['/register']">
+        GET STARTED
+      </button>
+      <button mat-stroked-button class="login-btn" [routerLink]="['/login']">
+        SIGN IN
+      </button>
+    </div>
+  </div>
+  <div class="hero-image-container">
+    <img src="https://d12y7sg0iam4lc.cloudfront.net/s/img/marketing/top-task-management/task-management-software.png"
+      alt="Task Management" class="hero-image" />
+  </div>
+</div>
+
+<div class="container">
+  <div class="section-title">
+    <h2>Boost Your Productivity</h2>
+    <mat-divider></mat-divider>
+  </div>
+
+  <div class="features">
+    <mat-card class="feature-card card-create">
+      <div class="feature-icon">
+        <mat-icon>add_task</mat-icon>
+      </div>
+      <mat-card-header>
+        <mat-card-title>Create & Organize</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Easily create, categorize and organize your tasks with our intuitive
+          interface. Group related tasks together and build a workflow that
+          matches your style.
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="feature-card card-track">
+      <div class="feature-icon">
+        <mat-icon>insights</mat-icon>
+      </div>
+      <mat-card-header>
+        <mat-card-title>Track Progress</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Visualize your productivity with beautiful charts and monitor progress
+          toward your goals in real-time. Celebrate your wins and identify areas
+          for improvement.
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="feature-card card-organized">
+      <div class="feature-icon">
+        <mat-icon>schedule</mat-icon>
+      </div>
+      <mat-card-header>
+        <mat-card-title>Stay On Schedule</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Set deadlines, reminders, and priorities to ensure you never miss an
+          important task again. Take control of your time and accomplish more
+          every day.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Start?</h2>
+      <p>
+        Join thousands of productive users today and transform the way you work.
+      </p>
+      <button mat-raised-button class="cta-button" [routerLink]="['/register']">
+        Create Free Account
+      </button>
+    </div>
+  </div>
+</div>

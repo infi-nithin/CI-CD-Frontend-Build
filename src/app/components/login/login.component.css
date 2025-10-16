@@ -1,0 +1,126 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px);
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f0f5ff 0%, #f5f7fa 100%);
+}
+
+.auth-card-wrapper {
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-title {
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.auth-subtitle {
+  color: #7a869a;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.auth-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.auth-card mat-form-field {
+  margin-bottom: 1rem;
+}
+
+.auth-card .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #dce0e6;
+}
+
+.auth-card mat-icon[matPrefix] {
+  color: #7a869a;
+  margin-right: 8px;
+}
+
+.auth-card input.mat-input-element {
+  padding: 0.25rem 0;
+}
+
+.auth-button-container {
+  margin-top: 1.5rem;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--accent-color);
+  color: var(--white);
+  border-radius: 30px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.auth-button:hover:not([disabled]) {
+  background-color: var(--accent-hover);
+  box-shadow: 0 4px 8px rgba(255, 106, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.auth-button:disabled {
+  opacity: 0.7;
+}
+
+.auth-alt-action {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.alt-action-text {
+  color: #7a869a;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.alt-action-link {
+  color: var(--highlight-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.alt-action-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.auth-button mat-spinner {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+@media (max-width: 480px) {
+  .auth-card-wrapper {
+    max-width: 100%;
+  }
+
+  .auth-title {
+    font-size: 1.5rem;
+  }
+
+  .auth-card {
+    padding: 1.25rem;
+  }
+}

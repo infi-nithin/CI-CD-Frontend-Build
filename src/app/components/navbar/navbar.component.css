@@ -1,0 +1,73 @@
+.modern-toolbar {
+  background-color: var(--primary-color);
+  color: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 1.5rem;
+  height: 64px;
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.app-title:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.nav-button {
+  color: white;
+  margin-left: 8px;
+  color: var(--white);
+  opacity: 0.9;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0 12px;
+}
+
+.nav-button:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-menu-button {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-left: 16px;
+  transition: var(--transition);
+}
+
+.user-menu-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-menu-button mat-icon {
+  margin-left: 4px;
+}
+
+@media (max-width: 600px) {
+  .modern-toolbar {
+    padding: 0 1rem;
+  }
+
+  .app-title {
+    font-size: 1.1rem;
+  }
+
+  .nav-button,
+  .user-menu-button {
+    min-width: 0;
+    padding: 0 8px;
+  }
+}

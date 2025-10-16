@@ -1,0 +1,45 @@
+<div class="task-details-container">
+  <div class="back-button">
+    <button mat-stroked-button (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon> Back to Tasks
+    </button>
+  </div>
+
+  <div class="loading-container" *ngIf="loading">
+    <mat-spinner diameter="40"></mat-spinner>
+  </div>
+
+  <div class="error-message" *ngIf="error">
+    {{ error }}
+  </div>
+
+  <mat-card *ngIf="task && !loading" class="task-details-card">
+    <mat-card-header>
+      <mat-card-title>
+        <div class="title-container">
+          <span>{{ task.title }}</span>
+          <span class="status-badge" [ngClass]="getStatusClass(task.status)">
+            {{ task.status }}
+          </span>
+        </div>
+      </mat-card-title>
+      <mat-card-subtitle>
+        Created: {{ task.createdAt | date:'medium' }}
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="description-section">
+        <h3>Description</h3>
+        <p *ngIf="task.description">{{ task.description }}</p>
+        <p *ngIf="!task.description" class="no-description">No description provided</p>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="editTask()">
+        <mat-icon>edit</mat-icon> Edit
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
