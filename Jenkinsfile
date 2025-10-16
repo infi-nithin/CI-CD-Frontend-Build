@@ -17,25 +17,33 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+				dir('CI-CD-Frontend-Build'){
+					sh 'npm install'
+				}
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build'
+				dir('CI-CD-Frontend-Build'){
+					sh 'npm run build'
+				}
             }
         }
 
         stage('Test') {
             steps {
-                sh 'npm test'
+				dir('CI-CD-Frontend-Build'){
+					sh 'npm test'
+				}
             }
         }
 
         stage('Archive Artifacts') {
             steps {
-                archiveArtifacts artifacts: 'build/**'
+				dir('CI-CD-Frontend-Build'){
+					archiveArtifacts artifacts: 'build/**'
+				}
             }
         }
 
