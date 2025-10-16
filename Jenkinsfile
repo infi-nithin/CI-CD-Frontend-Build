@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('Clean') {
+          steps{
+            cleanWs()
+          ]
+        }
         stage('Checkout') {
             steps {
                 sh 'git clone https://github.com/infi-nithin/CI-CD-Frontend-Build.git'
@@ -28,7 +33,7 @@ pipeline {
 
         stage('Archive Artifacts') {
             steps {
-                archiveArtifacts artifacts: 'build/**' // Archives the build output for later use or inspection
+                archiveArtifacts artifacts: 'build/**'
             }
         }
 
