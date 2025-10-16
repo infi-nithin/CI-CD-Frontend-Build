@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/infi-nithin/CI-CD-Frontend-Build.git'
+                sh 'git clone https://github.com/infi-nithin/CI-CD-Frontend-Build.git'
             }
         }
 
