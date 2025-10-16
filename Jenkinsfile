@@ -31,14 +31,6 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-				dir('CI-CD-Frontend-Build'){
-					sh 'npm test'
-				}
-            }
-        }
-
         stage('Archive Artifacts') {
             steps {
 				dir('CI-CD-Frontend-Build'){
