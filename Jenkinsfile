@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        nodejs 'Node22' 
+    }
     stages {
         stage('Clean') {
           steps{
