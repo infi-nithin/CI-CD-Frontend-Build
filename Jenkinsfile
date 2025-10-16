@@ -34,7 +34,7 @@ pipeline {
         stage('Archive Artifacts') {
             steps {
 				dir('CI-CD-Frontend-Build'){
-					archiveArtifacts artifacts: 'build/**'
+					archiveArtifacts artifacts: ''dist/**''
 				}
             }
         }
