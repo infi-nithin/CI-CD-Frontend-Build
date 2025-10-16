@@ -5,7 +5,7 @@ pipeline {
         stage('Clean') {
           steps{
             cleanWs()
-          ]
+          }
         }
         stage('Checkout') {
             steps {
